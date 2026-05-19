@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "type": "code",
+    "title": "Шахматы",
+    "description": "Учебынй прокет по написанию простой шахматной игры с поддержкой игры по сети",
+    "thumbnail": "/images/projects/dashboard.jpg",
+    "tags": ["React", "TypeScript", "D3.js", "WebSocket"],
+    "featured": true,
+    "date": "2025-05-29",
+    "code": {
+      "githubUrl": "https://github.com/LakusDVV/Mini-Chess-Game",
+      "liveUrl": "",
+      "stack": ["Python", "Raylib"]
+    }
+  },
+  {
+    "id": "2",
+    "type": "video",
+    "title": "Путь к 70-й волне",
+    "description": "Любительская нарезка геймлея игры SpiderHeck",
+    "thumbnail": "/images/projects/eco-brand.jpg",
+    "tags": ["Davinci Resolve", "Fusion", "SpiderHeck"],
+    "featured": true,
+    "date": "2025-04-15",
+    "video": {
+      "videoUrl": "https://youtu.be/o1Zohkdz_NQ?si=ZUAU2H_FujkRHKtW",
+      "duration": "7:16",
+      "role": "Монтаж"
+    }
+  }
+]
