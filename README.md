@@ -1,16 +1,73 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Модульный сайт-портфолио Владислава DVV: начинающего разработчика и видеомонтажера.
 
-Currently, two official plugins are available:
+Сайт сделан как гибкая витрина работ. Сейчас он показывает проекты из двух направлений:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- программирование;
+- видеомонтаж.
 
-## React Compiler
+При этом направления не зашиты в страницу как монолит. Они подключаются через отдельные модули, поэтому сайт можно расширять: добавить новое направление, временно отключить старое или поменять способ отображения работ.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Что уже есть
 
-## Expanding the ESLint configuration
+- Главный экран с кратким позиционированием.
+- Витрина работ в формате карусели.
+- Фильтр по направлениям: все работы, код, видео.
+- Две темы: темная и светлая.
+- Два языка интерфейса: русский и английский.
+- Данные проектов вынесены в `data/data.json`.
+- Отдельные модули для программирования и видеомонтажа.
+- Контакты: GitHub и Telegram.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Запуск
+
+```bash
+npm install
+npm run dev
+```
+
+Локальный адрес Vite обычно будет таким:
+
+```txt
+http://127.0.0.1:5173/
+```
+
+## Сборка
+
+```bash
+npm run build
+```
+
+## Проверка кода
+
+```bash
+npx eslint src/App.jsx src/modules/registry.js src/modules/programming/index.js src/modules/videoEditing/index.js src/shared/i18n.js
+```
+
+Полный `npm run lint` сейчас может проверять и вложенный проект `deadliner`, где есть отдельный backend на CommonJS. Поэтому для проверки именно портфолио лучше использовать команду выше.
+
+## Где что лежит
+
+- `src/App.jsx` - главный экран, витрина, фильтры, темы, языки.
+- `src/App.css` - внешний вид сайта и анимации карусели.
+- `src/shared/i18n.js` - тексты на русском и английском.
+- `src/modules/registry.js` - список подключенных модулей портфолио.
+- `src/modules/programming/index.js` - модуль программирования.
+- `src/modules/videoEditing/index.js` - модуль видеомонтажа.
+- `data/data.json` - список работ и ссылок.
+- `docs/site-structure.md` - подробное объяснение архитектуры сайта.
+
+## Источники работ
+
+Примеры проектов взяты из публичного GitHub-профиля:
+
+```txt
+https://github.com/LakusDVV
+```
+
+Видео-кейсы взяты с YouTube-канала:
+
+```txt
+https://www.youtube.com/@Lakus_DVV
+```
