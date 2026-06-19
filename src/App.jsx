@@ -228,7 +228,6 @@ function ShowcaseCard({ item, language, offset, isActive }) {
   )
 }
 
-
 function buildShowcaseItems(projects, t) {
   const realProjects = projects.map((project) => ({
     id: project.id,
@@ -246,14 +245,8 @@ function buildShowcaseItems(projects, t) {
     })),
   }))
 
-  // Только реальные проекты
-  return [
-    ...realProjects,
-    // Плашки "Скоро" и "План" - временно закомментированы
-    // createPlaceholder('placeholder-web', 'code', 'code', 'blue', t.placeholders.web),
-    // createPlaceholder('placeholder-app', 'code', 'app', 'violet', t.placeholders.app),
-    // createPlaceholder('placeholder-media', 'video', 'video', 'green', t.placeholders.media),
-  ]
+  // Удалены плашки "Скоро" и "План" - теперь только реальные проекты
+  return realProjects
 }
 
 function createPlaceholder(id, moduleId, visual, accent, content) {
