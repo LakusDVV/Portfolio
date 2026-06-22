@@ -45,8 +45,6 @@ npm run build
 npx eslint src/App.jsx src/modules/registry.js src/modules/programming/index.js src/modules/videoEditing/index.js src/shared/i18n.js
 ```
 
-Полный `npm run lint` сейчас может проверять и вложенный проект `deadliner`, где есть отдельный backend на CommonJS. Поэтому для проверки именно портфолио лучше использовать команду выше.
-
 ## Где что лежит
 
 - `src/App.jsx` - главный экран, витрина, фильтры, темы, языки.
